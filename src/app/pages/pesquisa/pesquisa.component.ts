@@ -1,17 +1,19 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from "@angular/core";
-import { Router } from '@angular/router';
+import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 
 @Component({
-    selector: 'app-pesquisa',
-    imports: [],
-    templateUrl: './pesquisa.component.html',
-    styleUrl: './pesquisa.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'app-pesquisa',
+  standalone: true,
+  templateUrl: './pesquisa.component.html',
+  styleUrls: ['./pesquisa.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PesquisaComponent implements OnInit {
 
-    roteador = inject(Router);
+  imageUrl: string = '';
 
-    ngOnInit(): void {
-    }
-}
+  ngOnInit(): void {
+
+  }
+
+  }
+
