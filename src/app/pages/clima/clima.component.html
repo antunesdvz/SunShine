@@ -1,8 +1,9 @@
 <div class="background"></div>
 <main class="login">
+
   <section class="card">
     <img src="img/Sunshine-removebg-preview.png" alt="logotipo" class="logo">
-    <h1>Bem-vindo ao SunShine</h1>
+    <h1 class="city">{{ dadosClima()?.name}}</h1>
 
     <button (click)="executarAcoes()" class="btn btn-primary">Pesquisar Clima</button>
   </section>
