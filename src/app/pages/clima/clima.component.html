@@ -5,6 +5,8 @@
     <img src="img/Sunshine-removebg-preview.png" alt="logotipo" class="logo">
     <h1 class="city">{{ dadosClima()?.name}}</h1>
 
+    <div class="temp">{{ dadosClima()?.main?.temp | number: '1.0-0' }}°C</div>
+
     <button (click)="executarAcoes()" class="btn btn-primary">Pesquisar Clima</button>
   </section>
 </main>

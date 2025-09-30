@@ -14,7 +14,8 @@ constructor() { }
 
   buscarInfoClimaCidadeAtual () {
     const urlCompleta =
-      this.apiUrl + '?q=Dois Vizinhos&appid=' + this.apiKey + '&lang=pt_br&units=metric';
+      this.apiUrl + '?q=Dois%20Vizinhos&appid='
+      + this.apiKey + '&lang=pt_br&units=metric';
 
     return this.http.get<WeatherResponse>(urlCompleta);
   }
