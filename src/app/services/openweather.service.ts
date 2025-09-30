@@ -10,6 +10,10 @@ export class OpenWeatherService {
 constructor() { }
 
   buscarInfoClimaCidadeAtual () {
-    const urlCompleta = '?q={city name}&appid=' + this.apiKey;
+    const urlCompleta =
+      this.apiUrl + '?q=Dois Vizinhos&appid=' + this.apiKey + '&lang=pt_br&units=metric';
+
+
+    console.log(urlCompleta);
   }
 }

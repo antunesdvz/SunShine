@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { OpenWeatherService } from "../../services/openweather.service";
 
 @Component({
   selector: 'app-pesquisa',
@@ -9,11 +11,15 @@ import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 })
 export class PesquisaComponent implements OnInit {
 
-  imageUrl: string = '';
+  navegador = inject(Router);
+  openWeatherService = inject(OpenWeatherService);
 
-  ngOnInit(): void {
-
+  ngOnInit() {
+    this.openWeatherService.buscarInfoClimaCidadeAtual();
   }
 
+  navegarParaTelaDePesquisa() {
+    this.navegador.navigate(['/pesquisa']);
   }
 
+}
