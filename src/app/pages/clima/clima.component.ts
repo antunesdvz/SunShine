@@ -4,16 +4,19 @@ import { OpenWeatherService } from "../../services/openweather.service";
 import { WeatherResponse } from "../../models/wheater-response.model";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { catchError, of } from "rxjs";
-import { DecimalPipe } from "@angular/common";
+import { DecimalPipe, TitleCasePipe } from "@angular/common";
 
 @Component({
   selector: 'app-clima',
   standalone: true,
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, TitleCasePipe],
   templateUrl: './clima.component.html',
   styleUrls: ['./clima.component.scss']
 })
 export class ClimaComponent implements OnInit {
+nevegarParaPesquisa() {
+throw new Error('Method not implemented.');
+}
 executarAcoes() {
   this.moverParaTelaDePesquisa();
 }

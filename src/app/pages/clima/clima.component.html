@@ -3,10 +3,24 @@
 
   <section class="card">
     <img src="img/Sunshine-removebg-preview.png" alt="logotipo" class="logo">
-    <h1 class="city">{{ dadosClima()?.name}}</h1>
+    <div class="clima-container">
 
-    <div class="temp">{{ dadosClima()?.main?.temp | number: '1.0-0' }}°C</div>
+      <div class="card">
+        @if (dadosClima()) {
+        <h1 class="city">{{ dadosClima()?.name }}</h1>
+        <div class="temp">{{ dadosClima()?.main?.temp | number: '1.0-0' }}°C</div>
+        
+        <div class="imp-titular">
+          @let clima = dadosClima()?.weather?.[0];
+          <img class="icon" [src]="'https://openweathermap.org/img/wn/' + (clima?.icon ?? '') + '@2x.png'">
+          <p class="desc">{{ clima?.description | titlecase }}</p>
+        </div>
+        <button (click)="nevegarParaPesquisa()">Pesquisar</button>
+      } @else {
+        <div class="imp-titular">
+          <p class="desc">Carregando ...</p>
+        </div>
+        }
+      </div>
 
-    <button (click)="executarAcoes()" class="btn btn-primary">Pesquisar Clima</button>
-  </section>
-</main>
+    </div>
