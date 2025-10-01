@@ -10,17 +10,14 @@
   background-repeat: no-repeat;
 }
 
-
 .login {
   position: relative;
   min-height: 100vh;
   display: grid;
   place-items: center;
   padding: 24px;
-  background: transparent; // remove cor sólida
+  background: transparent;
 }
-
-
 
 .card {
   width: 100%;
@@ -96,8 +93,34 @@ h1 {
   text-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-  .desc{
-    margin: 4px0 16px;
-    color: #000000;
-    font-weight: 500;
-  }
+.desc {
+  margin: 0 0 0 8px; // Margem apenas à esquerda
+  color: #000000;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+// Estilos específicos para o clima
+.city {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.imp-titular {
+  margin: 16px 0;
+}
+
+.clima-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 85px; // Reduzido para ficar ao lado do texto
+  height: 85px;
+  display: block;
+}
