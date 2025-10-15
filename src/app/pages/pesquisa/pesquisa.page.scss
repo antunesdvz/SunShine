@@ -1,0 +1,32 @@
+  :host {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url('/img/paisagem.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+input[type="text"] {
+  width: 80%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffe4f1; 
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+  color: #000000; 
+  font-style: italic;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background-color: #000000;
+  box-shadow: 0 0 0 3px #ffffff;
+}

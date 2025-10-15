@@ -1,0 +1,30 @@
+:host {
+  .clima-container {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(251, 200, 200, 0.04);
+    border: 1px solid #000000;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+    .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  }
+
